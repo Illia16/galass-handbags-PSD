@@ -38,8 +38,6 @@ h1 {
     text-align: right;
     line-height: 94.3px;
     margin: 200px 0;
-
-    min-width: 500px;
 }
 
 h1,
@@ -183,8 +181,6 @@ nav input[type="checkbox"] {
     opacity: 0;
 }
 
-/* Section styling */
-
 /* Section ONE styling */
 .section-one,
 .section-three,
@@ -203,7 +199,7 @@ nav input[type="checkbox"] {
     min-width: 100%;
     min-height: 100%;
     object-fit: none;
-    object-position: 25% 15%;
+    object-position: 25% 25%;
 }
 
 .section-one-content {
@@ -230,6 +226,10 @@ nav input[type="checkbox"] {
     text-align: center;
 }
 
+.section-two h2 {
+    margin-top: 0;
+}
+
 .section-two-image-container li {
     float: left;
     width: calc(100%/3 - 20px);
@@ -238,10 +238,6 @@ nav input[type="checkbox"] {
 
 .section-two-image-container li:nth-child(2) {
     margin: 0 30px;
-}
-
-.section-two h2 {
-    margin-top: 0;
 }
 
 /* Section THREE styling */
@@ -334,7 +330,6 @@ nav input[type="checkbox"] {
 .section-five ul,
 .contact {
     min-width: calc(100%/4);
-
 }
 
 .subscribe {
@@ -376,16 +371,30 @@ nav input[type="checkbox"] {
 
 
 /* Footer styling */
-
 footer {
     padding: 5px 0;
     background: #1D0303;
     text-align: center;
 }
 
-
-
 /* Responsive design */
+
+@media (min-width: 1251px) {
+
+    .section-four {
+        height: 1200px;
+    }
+
+    .section-four-images img,
+    .section-four-content {
+        height: 600px;
+    }
+
+    .section-four-content {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+}
 
 @media (max-width: 1250px) {
 
@@ -403,7 +412,7 @@ footer {
 
     h1 {
         margin: 0;
-        width: 70%;
+        width: 100%;
         float: right;
     }
 
@@ -429,43 +438,6 @@ footer {
         margin: 0 5px;
     }
 
-    /* Section 1 */
-
-    .section-one .section-one-image {
-        height: initial;
-    }
-
-    .section-one .section-one-image,
-    .section-one .section-one-content {
-        text-align: center; 
-        width: 100%;
-        float: none;
-    }
-
-    .section-one .section-one-content p{
-        text-align: left;
-    }
-
-    .section-one .section-one-image img {
-        object-fit: cover;
-        /* object-position: 25% 15%; ???? */
-    }
-
-    .section-one-content {
-        max-width: initial;
-        margin-left: 0;
-    }
-
-    .section-one-content h2 {
-        margin: 70px 0;
-    }
-
-    /* Section 2 */
-    /* Skip for now */
-
-    /* Section 3 */
-    /* Skip for now */
-
     /* Section 4 */
     .section-four-content,
     .section-four-images {
@@ -482,7 +454,6 @@ footer {
     }
 
     /* Section 5 */
-
     .section-five ul,
     .section-five .subscribe,
     .section-five .contact,
@@ -529,7 +500,6 @@ footer {
 @media (max-width: 850px) {
 
     /* header */
-
     input[type="checkbox"],
     nav label {
         display: inline-block;
@@ -553,10 +523,35 @@ footer {
 
     input[type="checkbox"]:checked ~ ul {
         position: static;
+        margin-top: 20px;
+    }
+
+    /* Section 1 */
+    .section-one .section-one-image {
+        height: initial;
+    }
+
+    .section-one .section-one-image,
+    .section-one .section-one-content {
+        text-align: center; 
+        width: 100%;
+        float: none;
+    }
+
+    .section-one .section-one-content p{
+        text-align: left;
+    }
+
+    .section-one-content {
+        max-width: initial;
+        margin-left: 0;
+    }
+
+    .section-one-content h2 {
+        margin: 70px 0;
     }
 
     /* Section 2 */
-
     .section-two-image-container li:nth-child(1) {
         float: right;
     }
@@ -574,7 +569,6 @@ footer {
     }
 
     /* Section 3 */
-
     .section-three li {
         clear: both;
         width: 100%;
@@ -585,7 +579,6 @@ footer {
         margin-right: 0;
     }
 }
-
 
 @media (max-width: 650px) {
 
@@ -602,15 +595,24 @@ footer {
     }
 
     header img {
-        width: 70%;
+        width: 85%;
         min-width: 200px;
     }
 }
 
 @media (max-width: 525px) {
 
+    header {
+        padding-bottom: 0;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
     .social-media-icons {
         opacity: 0;
+        padding: 0;
     }
 
     header nav ul li {
@@ -623,6 +625,19 @@ footer {
 }
 
 @media (max-width: 400px) {
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .section-one-image img {
+        object-fit: cover;
+    }
+
+    .section-five ul {
+        padding-top: 0;
+    }
+
     .section-five ul li{
         width: 100%;
     }
@@ -631,5 +646,6 @@ footer {
     .section-five ul li:nth-child(3), 
     .section-five ul li:nth-child(4) {
         margin-left: 0;
+        margin-top: 10px;
     }
 }
