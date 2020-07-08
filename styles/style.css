@@ -62,7 +62,7 @@ h3 {
     text-align: right;
 }
 
-button,
+.read-more,
 input[type="submit"] {
     font-family: 'Petit Formal Script', cursive;
     font-size: 2.5rem;
@@ -74,8 +74,8 @@ input[type="submit"] {
     padding: 5px 15px;
 }
 
-button:hover,
-button:focus,
+.read-more:hover,
+.read-more:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
     color: #1D0303;
